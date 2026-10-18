@@ -1,29 +1,30 @@
-# 🚀 Installazione & Hosting — ZealBot
+# dove far vivere la creatura
 
-Guida semplificata in italiano basata sulla documentazione ufficiale di [zema-tech/zealbot-discord](https://github.com/zema-tech/zealbot-discord).
-
----
-
-## Requisiti
-
-- **Node.js ≥ 22.12** (consigliato **Node 24**)
-- File `.env` con almeno `DISCORD_TOKEN` e `CLIENT_ID`
-- Deploy dei comandi: `npm run deploy`
+ZealBot non chiede un trono.  
+Chiede solo un posto dove non morire ogni volta che il server si riavvia.
 
 ---
 
-## Avvio rapido (locale / VPS)
+## cosa gli serve per non collassare
+
+- Node.js ≥ 22.12 (meglio 24, più ossigeno)
+- un file `.env` con almeno `DISCORD_TOKEN` e `CLIENT_ID`
+- il rito di nascita dei comandi: `npm run deploy`
+
+---
+
+## il modo più semplice (locale o VPS)
 
 ```bash
 git clone https://github.com/zema-tech/zealbot-discord.git
 cd zealbot-discord
 npm install
-cp .env.example .env          # compila DISCORD_TOKEN + CLIENT_ID
-npm run deploy                # registra gli slash command
-npm start                     # avvia il bot
+cp .env.example .env          # qui ci metti il sangue
+npm run deploy                # i comandi aprono gli occhi
+npm start                     # e poi respirano
 ```
 
-Dashboard (opzionale):
+Se vuoi anche la dashboard (l'occhio che guarda):
 
 ```bash
 npm run dashboard
@@ -31,14 +32,14 @@ npm run dashboard
 
 ---
 
-## Docker
+## Docker (la gabbia elegante)
 
 ```bash
 cp .env.example .env
 docker compose up -d --build
 ```
 
-Immagine precompilata:
+Oppure prendi l'immagine già fatta:
 
 ```bash
 docker pull ghcr.io/zema-tech/zealbot-discord:latest
@@ -46,35 +47,36 @@ docker pull ghcr.io/zema-tech/zealbot-discord:latest
 
 ---
 
-## Altri host supportati
+## altri mondi possibili
 
-| Host | Note |
-|------|------|
-| **VPS (Ubuntu/Debian)** | systemd o PM2 |
+| posto | come sopravvive |
+|-------|-----------------|
+| **VPS** | systemd o PM2 (scegli uno e non tradirlo) |
 | **Fly.io** | `fly launch` + secrets |
-| **Render / Railway** | Blueprint / Volume per i dati |
-| **Pterodactyl** | Egg NodeJS generico |
-| **Termux** | Per sviluppo su Android |
+| **Render / Railway** | blueprint + volume, altrimenti i dati evaporano |
+| **Pterodactyl** | egg NodeJS generico |
+| **Termux** | solo se stai giocando, non se stai facendo sul serio |
 
 ---
 
-## Persistenza dati
+## la memoria (importante)
 
-- Default: `DB_BACKEND=json`
-- Consigliato in produzione / Docker: `DB_BACKEND=sqlite` + volume su `data/`
-
----
-
-## Troubleshooting veloce
-
-| Problema | Soluzione |
-|----------|-----------|
-| Bot online ma non risponde | Abilita **Message Content** e **Server Members** Intent |
-| Comandi mancanti | Esegui `npm run deploy` |
-| Token invalid | Controlla `DISCORD_TOKEN` nel `.env` |
-| Dati azzerati dopo deploy | Usa volume persistente + SQLite |
+- di default usa `DB_BACKEND=json`
+- in produzione o Docker: passa a `sqlite` e metti un volume su `data/`
+- senza volume persistente, ogni deploy è un'amnesia
 
 ---
 
-Documentazione ufficiale completa:  
+## quando qualcosa va storto
+
+| sintomo | cosa probabilmente sta succedendo |
+|---------|-----------------------------------|
+| è online ma non risponde | gli Intent (Message Content + Server Members) sono spenti |
+| i comandi non ci sono | non hai fatto `npm run deploy` |
+| Token invalid | il sangue nel `.env` è sbagliato o vecchio |
+| i dati spariscono | non c'è un volume. i fantasmi non tengono i soldi. |
+
+---
+
+la versione lunga e ufficiale (quella seria) sta qui:  
 → [docs/it/HOSTING.md](https://github.com/zema-tech/zealbot-discord/blob/main/docs/it/HOSTING.md)
