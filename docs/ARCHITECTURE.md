@@ -1,18 +1,19 @@
-# 🏗️ Architettura di ZealBot
+# come è fatto dentro (senza bugie)
 
-ZealBot non è un bot "monolitico". Usa un'architettura pensata per essere **stabile e scalabile**.
+ZealBot non è un blocco di codice che spera di non rompersi.  
+È un organismo con cervello e sistema immunitario.
 
 ---
 
-## Schema semplificato
+## lo schema (semplice, ma vero)
 
 ```text
         Dashboard / Discord / MCP
                     │
                     ▼
             ┌───────────────┐
-            │   COMMANDER   │  ← cervello
-            │  + Guardian   │  ← sistema immunitario
+            │   COMMANDER   │  ← il cervello
+            │  + Guardian   │  ← il sistema immunitario
             └───────────────┘
                     │
      ┌─────────────┼─────────────┐
@@ -22,32 +23,39 @@ ZealBot non è un bot "monolitico". Usa un'architettura pensata per essere **sta
 
 ---
 
-## Componenti chiave
+## i pezzi che contano
 
 ### Commander
-- Punto di ingresso unico di tutti i comandi
-- Toggle **on/off per ogni server**
-- Isolamento: se un modulo crasha, gli altri continuano a funzionare
+
+il cervello.  
+tutto passa da qui.  
+ogni server può accendere o spegnere i moduli.  
+se un pezzo muore, gli altri non muoiono con lui.
 
 ### Guardian
-- Tiene traccia di successi / fallimenti / timeout
-- Può mettere in quarantena moduli problematici
-- Recovery automatico
 
-### Moduli
-- Ogni funzionalità (moderazione, economia, ticket, AI…) è un modulo indipendente
-- I moduli **non** si chiamano tra loro direttamente
+il sistema immunitario.  
+tiene il punteggio di successi e fallimenti.  
+mette in quarantena.  
+prova a far tornare le cose normali.
 
----
+### i moduli
 
-## Vantaggi
-
-- Un bug in un modulo non fa crashare tutto il bot
-- Facile aggiungere nuove feature
-- Configurazione granulare per server
-- Ideale per multi-server
+ogni funzionalità è un pezzo separato.  
+moderazione, economia, ticket, AI…  
+non si chiamano tra loro.  
+parlano solo con il Commander.
 
 ---
 
-Documentazione ufficiale più approfondita:  
+## perché è fatto così
+
+perché un bug non deve far crollare tutto.  
+perché aggiungere cose nuove non deve essere una guerra.  
+perché ogni server può essere diverso.  
+perché multi-server senza diventare un mostro.
+
+---
+
+la versione lunga e tecnica (quella che non usa metafore) sta qui:  
 → [docs/it/ARCHITECTURE.md](https://github.com/zema-tech/zealbot-discord/blob/main/docs/it/ARCHITECTURE.md)
