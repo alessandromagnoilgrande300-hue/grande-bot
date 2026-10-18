@@ -1,100 +1,125 @@
 <div align="center">
 
-# 👑 GrandeBot
+# ⚡ ZealBot — Documentazione
 
-### Il bot Discord di **Alessandro Magno il Grande**
+### Documentazione completa del bot Discord di [zema-tech](https://github.com/zema-tech)
 
-*Studente · Builder · Amico di [zema-tech](https://github.com/zema-tech)*
+[![Repo ufficiale](https://img.shields.io/badge/Repo%20ufficiale-zema--tech%2Fzealbot--discord-5865F2?style=for-the-badge&logo=github)](https://github.com/zema-tech/zealbot-discord)
+[![Docs ufficiali](https://img.shields.io/badge/Docs%20ufficiali-zema--tech.github.io-00D4FF?style=for-the-badge)](https://zema-tech.github.io/zealbot-discord/)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://github.com/zema-tech/zealbot-discord/blob/main/LICENSE)
 
-<img src="https://img.shields.io/badge/Status-In%20Development-00D4FF?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Discord.js-v14-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
-<img src="https://img.shields.io/badge/Node.js-20+-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+**Production-ready multi-server Discord bot**  
+~85+ slash commands · Commander + Guardian · Web Dashboard · AI plug-and-play
 
 </div>
 
 ---
 
-### 🌟 Cos'è GrandeBot?
+## Cos'è ZealBot?
 
-GrandeBot è il mio laboratorio personale di Discord bot.  
-Qui imparo, sperimento e costruisco funzionalità fighe ispirandomi al lavoro di **zema-tech** (ZealBot, Omnicore, ecc.).
+**ZealBot** è un bot Discord professionale, self-hostable e open-source creato da **[zema-tech](https://github.com/zema-tech)**.
 
-> "Non conquisto il mondo... ma conquisto i server Discord uno alla volta."
+È pensato per server medi e grandi che vogliono:
+- Moderazione seria
+- Economia e livelli
+- Ticket professionali
+- AI integrata
+- Dashboard web moderna
+- Architettura robusta (un modulo rotto non fa crashare tutto)
 
----
-
-### 🚀 Features (in arrivo / in sviluppo)
-
-- ⚡ Slash commands moderni
-- 🧠 Comandi AI (con Groq / OpenRouter)
-- 🎮 Divertimento & utility
-- 📊 Stats e ranking
-- 🔧 Architettura pulita (ispirata a Commander di ZealBot)
-- 🌐 Multilingua (IT / EN)
+> Self-hostable · MIT · Dashboard ispirata a MEE6 · Commander + sistema immunitario (Guardian)
 
 ---
 
-### 👨‍👩‍👧‍👦 Squadra
+## Perché ZealBot?
 
-| Persona | Ruolo |
-|--------|------|
-| **Alessandro** | Owner & Student Developer |
-| **[zema-tech](https://github.com/zema-tech)** | Mentore & ispirazione (ZealBot / Omnicore) |
-
----
-
-### 🛠️ Stack
-
-- **Node.js** + **discord.js** v14
-- Slash Commands
-- Pronto per aggiungere AI agents
+| Feature | Descrizione |
+|---------|-------------|
+| **Commander** | Punto di ingresso unico: toggle per-server, esecuzione isolata |
+| **Guardian** | Health scoring, quarantena automatica, recovery |
+| **AI plug-and-play** | Una sola API key (Groq, Gemini, OpenAI, xAI…) |
+| **Ticket professionali** | Claim, transcript, priority, SLA, rating |
+| **Moderazione seria** | Warn con escalation, lockdown, case registry |
+| **Web Dashboard** | OAuth2 Discord, griglia server, moduli configurabili |
 
 ---
 
-### 📝 Setup veloce
+## Quick Start
 
 ```bash
-git clone https://github.com/alessandromagnoilgrande300-hue/grande-bot.git
-cd grande-bot
+git clone https://github.com/zema-tech/zealbot-discord.git
+cd zealbot-discord
 npm install
-cp .env.example .env   # metti il tuo DISCORD_TOKEN
-node src/index.js
+cp .env.example .env          # imposta DISCORD_TOKEN + CLIENT_ID
+node deploy-commands.js
+npm start
+```
+
+```bash
+npm test                      # smoke tests (senza token)
+npm run dashboard             # pannello web (processo separato)
 ```
 
 ---
 
-### 📁 Struttura del progetto
+## Documentazione
 
-```
-grande-bot/
-├── src/
-│   ├── index.js          # Entry point
-│   ├── commands/         # Slash commands
-│   └── events/           # Event handlers
-├── .env.example
-├── package.json
-└── README.md
-```
+### Guide principali (in questo repo)
+
+| Documento | Contenuto |
+|-----------|-----------|
+| [**Installazione & Hosting**](docs/HOSTING.md) | Docker, PM2, VPS, Fly.io, Render |
+| [**Configurazione**](docs/CONFIG.md) | Variabili d'ambiente e opzioni |
+| [**Lista Comandi**](docs/COMMANDS.md) | Panoramica dei ~85+ slash commands |
+| [**Architettura**](docs/ARCHITECTURE.md) | Commander, Guardian, moduli |
+
+### Link ufficiali
+
+- 💻 **Repository**: [zema-tech/zealbot-discord](https://github.com/zema-tech/zealbot-discord)
+- 📚 **Docs ufficiali**: [zema-tech.github.io/zealbot-discord](https://zema-tech.github.io/zealbot-discord/)
+- 📝 **README IT**: [README.it.md](https://github.com/zema-tech/zealbot-discord/blob/main/README.it.md)
 
 ---
 
-### 🎯 Roadmap
+## Aree funzionali
 
-- [x] Repository creato
-- [ ] Struttura base funzionante
-- [ ] Primi comandi (`/ping`, `/info`, `/grande`)
-- [ ] Integrazione AI semplice
-- [ ] Dashboard (forse in futuro)
+| Area | Cosa include |
+|------|--------------|
+| **Moderazione** | ban, kick, timeout, warn, clear, lockdown, cases |
+| **Economia** | balance, daily, bank, shop, lottery, rob, slots |
+| **Livelli** | XP chat/voce, rank, leaderboard, reward roles |
+| **Ticket** | panel, claim, transcript, priority, SLA, rating |
+| **AI** | `/chiedi`, summarize, brain/skills |
+| **Utility** | welcome, automod, starboard, reaction roles, giveaway… |
+| **Musica** | `/musica` (play, queue, skip, loop…) |
+
+---
+
+## Requisiti
+
+- **Node.js 22+** (consigliato Node 24)
+- Intent Discord: Guilds, GuildMessages, **Message Content**, **Server Members**, GuildModeration
+- Token del bot + Client ID
+
+---
+
+## Supporta il progetto
+
+Se ZealBot ti è utile, puoi supportare lo sviluppo:
+
+- ⭐ Metti una **star** al repository ufficiale
+- 💳 [Donazione Stripe](https://donate.stripe.com/test_aFa9AMegr8Me61bgAXcbC01)
+- 📝 Apri issue e pull request
 
 ---
 
 <div align="center">
 
-**Made with ⚡ by Alessandro Magno il Grande**  
-*Ispirato da [zema-tech](https://github.com/zema-tech) e dalla voglia di costruire cose belle*
+**Documentazione curata da [Alessandro Magno il Grande](https://github.com/alessandromagnoilgrande300-hue)**  
+*Amico e collaboratore di [zema-tech](https://github.com/zema-tech)*
 
 <br>
 
-[![GitHub stars](https://img.shields.io/github/stars/alessandromagnoilgrande300-hue/grande-bot?style=social)](https://github.com/alessandromagnoilgrande300-hue/grande-bot)
+[![GitHub](https://img.shields.io/badge/Repo%20ufficiale-zema--tech%2Fzealbot--discord-181717?style=for-the-badge&logo=github)](https://github.com/zema-tech/zealbot-discord)
 
 </div>
