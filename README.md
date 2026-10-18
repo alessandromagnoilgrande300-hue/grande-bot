@@ -1,125 +1,121 @@
 <div align="center">
 
-# ⚡ ZealBot — Documentazione
+# ⚡ ZEALBOT
+### la documentazione che non doveva esistere (ma esiste)
 
-### Documentazione completa del bot Discord di [zema-tech](https://github.com/zema-tech)
+[![il codice vivo](https://img.shields.io/badge/repo-zema--tech%2Fzealbot--discord-5865F2?style=for-the-badge&logo=github)](https://github.com/zema-tech/zealbot-discord)
+[![dove abita la verità](https://img.shields.io/badge/docs-zema--tech.github.io-00D4FF?style=for-the-badge)](https://zema-tech.github.io/zealbot-discord/)
 
-[![Repo ufficiale](https://img.shields.io/badge/Repo%20ufficiale-zema--tech%2Fzealbot--discord-5865F2?style=for-the-badge&logo=github)](https://github.com/zema-tech/zealbot-discord)
-[![Docs ufficiali](https://img.shields.io/badge/Docs%20ufficiali-zema--tech.github.io-00D4FF?style=for-the-badge)](https://zema-tech.github.io/zealbot-discord/)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://github.com/zema-tech/zealbot-discord/blob/main/LICENSE)
-
-**Production-ready multi-server Discord bot**  
-~85+ slash commands · Commander + Guardian · Web Dashboard · AI plug-and-play
+**non è un bot.**  
+è un organismo.  
+~85 comandi che respirano.  
+Un cervello chiamato **Commander**.  
+Un sistema immunitario chiamato **Guardian**.  
+Una dashboard che ti guarda mentre tu guardi lei.
 
 </div>
 
 ---
 
-## Cos'è ZealBot?
+## cos'è questa cosa?
 
-**ZealBot** è un bot Discord professionale, self-hostable e open-source creato da **[zema-tech](https://github.com/zema-tech)**.
+ZealBot è quello che succede quando uno studente (zema-tech) decide che i bot Discord normali sono troppo... normali.
 
-È pensato per server medi e grandi che vogliono:
-- Moderazione seria
-- Economia e livelli
-- Ticket professionali
-- AI integrata
-- Dashboard web moderna
-- Architettura robusta (un modulo rotto non fa crashare tutto)
+Non crasha quando un modulo muore.  
+Non piange quando un server gli chiede troppe cose.  
+Ha un'AI che puoi collegare con una sola chiave.  
+Ha ticket che sembrano presi da un helpdesk serio.  
+Ha un'economia, dei livelli, della moderazione che non fa ridere.
 
-> Self-hostable · MIT · Dashboard ispirata a MEE6 · Commander + sistema immunitario (Guardian)
-
----
-
-## Perché ZealBot?
-
-| Feature | Descrizione |
-|---------|-------------|
-| **Commander** | Punto di ingresso unico: toggle per-server, esecuzione isolata |
-| **Guardian** | Health scoring, quarantena automatica, recovery |
-| **AI plug-and-play** | Una sola API key (Groq, Gemini, OpenAI, xAI…) |
-| **Ticket professionali** | Claim, transcript, priority, SLA, rating |
-| **Moderazione seria** | Warn con escalation, lockdown, case registry |
-| **Web Dashboard** | OAuth2 Discord, griglia server, moduli configurabili |
+È self-hostable.  
+È MIT.  
+È vivo.
 
 ---
 
-## Quick Start
+## perché dovresti usarlo (o almeno guardarlo)
+
+| pezzo | cosa fa davvero |
+|-------|-----------------|
+| **Commander** | il cervello. tutto passa da qui. un modulo muore? gli altri continuano a respirare. |
+| **Guardian** | il sistema immunitario. tiene il punteggio. mette in quarantena. guarisce. |
+| **AI** | una chiave. tanti provider. il bot diventa intelligente senza diventare un mostro. |
+| **Ticket** | claim, transcript, priorità, SLA, rating. tipo un vero supporto, ma dentro Discord. |
+| **Moderazione** | warn che scalano. lockdown con memoria. casi che non spariscono. |
+| **Dashboard** | OAuth2. griglia di server. moduli che si accendono e si spengono come interruttori. |
+
+---
+
+## come si fa a farlo vivere
 
 ```bash
 git clone https://github.com/zema-tech/zealbot-discord.git
 cd zealbot-discord
 npm install
-cp .env.example .env          # imposta DISCORD_TOKEN + CLIENT_ID
-node deploy-commands.js
-npm start
+cp .env.example .env          # qui ci metti il sangue (TOKEN + CLIENT_ID)
+node deploy-commands.js       # i comandi nascono
+npm start                     # e poi respirano
 ```
 
 ```bash
-npm test                      # smoke tests (senza token)
-npm run dashboard             # pannello web (processo separato)
+npm test                      # verifica che non sia un fantasma
+npm run dashboard             # la dashboard si sveglia
 ```
 
 ---
 
-## Documentazione
+## le mappe di questo posto
 
-### Guide principali (in questo repo)
-
-| Documento | Contenuto |
-|-----------|-----------|
-| [**Installazione & Hosting**](docs/HOSTING.md) | Docker, PM2, VPS, Fly.io, Render |
-| [**Configurazione**](docs/CONFIG.md) | Variabili d'ambiente e opzioni |
-| [**Lista Comandi**](docs/COMMANDS.md) | Panoramica dei ~85+ slash commands |
-| [**Architettura**](docs/ARCHITECTURE.md) | Commander, Guardian, moduli |
-
-### Link ufficiali
-
-- 💻 **Repository**: [zema-tech/zealbot-discord](https://github.com/zema-tech/zealbot-discord)
-- 📚 **Docs ufficiali**: [zema-tech.github.io/zealbot-discord](https://zema-tech.github.io/zealbot-discord/)
-- 📝 **README IT**: [README.it.md](https://github.com/zema-tech/zealbot-discord/blob/main/README.it.md)
+| documento | cosa contiene |
+|-----------|---------------|
+| [**HOSTING**](docs/HOSTING.md) | dove farlo vivere (Docker, VPS, nuvole strane) |
+| [**CONFIG**](docs/CONFIG.md) | le variabili che gli danno forma |
+| [**COMMANDS**](docs/COMMANDS.md) | la lista quasi infinita di cose che sa fare |
+| [**ARCHITECTURE**](docs/ARCHITECTURE.md) | come è costruito dentro (senza mentire) |
 
 ---
 
-## Aree funzionali
+## le zone del regno
 
-| Area | Cosa include |
-|------|--------------|
+| zona | creature che ci abitano |
+|------|-------------------------|
 | **Moderazione** | ban, kick, timeout, warn, clear, lockdown, cases |
 | **Economia** | balance, daily, bank, shop, lottery, rob, slots |
-| **Livelli** | XP chat/voce, rank, leaderboard, reward roles |
-| **Ticket** | panel, claim, transcript, priority, SLA, rating |
-| **AI** | `/chiedi`, summarize, brain/skills |
-| **Utility** | welcome, automod, starboard, reaction roles, giveaway… |
-| **Musica** | `/musica` (play, queue, skip, loop…) |
+| **Livelli** | XP da chat e da voce, rank, leaderboard, ruoli-premio |
+| **Ticket** | pannelli, claim, transcript, priorità, rating |
+| **AI** | `/chiedi`, summarize, cervelli e skill per-server |
+| **Utility** | welcome, automod, starboard, reaction roles, giveaway |
+| **Musica** | `/musica` e tutto quello che ne consegue |
 
 ---
 
-## Requisiti
+## cosa gli serve per esistere
 
-- **Node.js 22+** (consigliato Node 24)
+- Node.js 22+ (meglio 24, più sangue fresco)
 - Intent Discord: Guilds, GuildMessages, **Message Content**, **Server Members**, GuildModeration
-- Token del bot + Client ID
+- Un token. Un Client ID. Un po' di coraggio.
 
 ---
 
-## Supporta il progetto
+## se vuoi che continui a crescere
 
-Se ZealBot ti è utile, puoi supportare lo sviluppo:
-
-- ⭐ Metti una **star** al repository ufficiale
-- 💳 [Donazione Stripe](https://donate.stripe.com/test_aFa9AMegr8Me61bgAXcbC01)
-- 📝 Apri issue e pull request
+- metti una ⭐ sul [repo ufficiale](https://github.com/zema-tech/zealbot-discord)
+- oppure [dai qualcosa](https://donate.stripe.com/test_aFa9AMegr8Me61bgAXcbC01)
+- oppure apri un issue e digli cosa manca
 
 ---
 
 <div align="center">
 
-**Documentazione curata da [Alessandro Magno il Grande](https://github.com/alessandromagnoilgrande300-hue)**  
-*Amico e collaboratore di [zema-tech](https://github.com/zema-tech)*
+questa documentazione è ufficiale.  
+scritta in un linguaggio che non dovrebbe esistere.  
+ma esiste.  
+
+curata da **Alessandro Magno il Grande**  
+per conto (e con rispetto) di **zema-tech**
 
 <br>
 
-[![GitHub](https://img.shields.io/badge/Repo%20ufficiale-zema--tech%2Fzealbot--discord-181717?style=for-the-badge&logo=github)](https://github.com/zema-tech/zealbot-discord)
+[il codice vero →](https://github.com/zema-tech/zealbot-discord)
 
 </div>
