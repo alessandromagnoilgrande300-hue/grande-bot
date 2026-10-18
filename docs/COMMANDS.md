@@ -1,49 +1,60 @@
-# 📜 Comandi di ZealBot
+# le armi che conosce
 
-Panoramica delle principali categorie di comandi (circa **85+ slash commands**).
-
-Documentazione ufficiale completa:  
-→ [docs/it/COMMANDS.md](https://github.com/zema-tech/zealbot-discord/blob/main/docs/it/COMMANDS.md)
+ZealBot ha circa **ottantacinque** comandi.  
+Non tutti servono sempre.  
+Ma tutti esistono.  
+E possono essere accesi o spenti **per server**, grazie al Commander.
 
 ---
 
 ## Moderazione
 
+il lato oscuro e necessario
+
 - `/ban` `/kick` `/timeout` `/warn` `/clear`
-- `/lockdown` — blocco canale con snapshot permessi
-- `/cases` — registro casi di moderazione
+- `/lockdown` — chiude tutto e ricorda come erano i permessi
+- `/cases` — la memoria dei castighi
 
 ## Economia
+
+il gioco dei soldi finti che diventano importanti
 
 - `/balance` `/daily` `/bank` `/shop`
 - `/lottery` `/rob` `/slots`
 
-## Livelli (XP)
+## Livelli
 
-- XP da chat e da voce
-- `/rank` `/leaderboard`
-- Ruoli premio automatici
+l'XP che sale mentre parli o stai in call
+
+- rank, leaderboard, ruoli che si guadagnano
 
 ## Ticket
 
-- Pannello ticket
-- Claim, transcript, priorità, SLA, rating
+il supporto che non fa ridere
+
+- pannello, claim, transcript, priorità, SLA, rating
 
 ## AI
 
-- `/chiedi` — domanda all'AI
-- Summarize, brain e skills per-guild
-- Supporto multi-provider (Groq, Gemini, OpenAI, xAI…)
+il pezzo che parla
+
+- `/chiedi`
+- summarize
+- brain e skill diversi per ogni server
+- una chiave sola, tanti provider (Groq, Gemini, OpenAI, xAI…)
 
 ## Utility
 
-- Welcome, Automod, Starboard
-- Reaction roles, Giveaway
+le piccole cose che fanno sembrare il server vivo
+
+- welcome, automod, starboard
+- reaction roles, giveaway
 
 ## Musica
 
-- `/musica` play, queue, skip, loop…
+- `/musica` e tutto il resto (play, queue, skip, loop…)
 
 ---
 
-> I comandi sono attivabili/disattivabili **per server** grazie all'architettura Commander.
+la lista completa e dettagliata (quella che non mente) sta qui:  
+→ [docs/it/COMMANDS.md](https://github.com/zema-tech/zealbot-discord/blob/main/docs/it/COMMANDS.md)
